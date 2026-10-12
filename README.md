@@ -6,12 +6,12 @@ This responsive, single-page website was **written directly in ChatGPT**, hand-c
 
 ## Structure
 
-- \`site-2026/index.html\` — original editorial HTML5 website, SEO and accessibility metadata.
-- \`site-2026/styles.css\` — bespoke responsive art direction, mobile composition and transitions.
-- \`site-2026/app.js\` — mobile navigation, gallery, accessible tab selection, hover interactions, motion/reveal controls.
-- \`src/assets/*.jpg\` — illustrative concept food photographs, retained as source assets.
-- \`public/favicon.svg\` — simple concept favicon.
-- \`.github/workflows/pages.yml\` — copies this static site and its assets to GitHub Pages.
+- `site-2026/index.html` — original editorial HTML5 website, SEO and accessibility metadata.
+- `site-2026/styles.css` — bespoke responsive art direction, mobile composition and transitions.
+- `site-2026/app.js` — mobile navigation, gallery, accessible tab selection, hover interactions, motion/reveal controls.
+- `src/assets/*.jpg` — illustrative concept food photographs, retained as source assets.
+- `public/favicon.svg` — simple concept favicon.
+- `.github/workflows/pages.yml` — copies this static site and its assets to GitHub Pages.
 
 ## Design references (inspiration, not copied templates)
 
@@ -22,14 +22,14 @@ This responsive, single-page website was **written directly in ChatGPT**, hand-c
 
 ## Preview locally
 
-Serve \`site-2026/\` from a local static server **with the four assets copied** into \`site-2026/assets/\`. Example, from the repository root:
+Serve `site-2026/` from a local static server **with the four assets copied** into `site-2026/assets/`. Example, from the repository root:
 
-\`\`\`bash
+```bash
 mkdir -p site-2026/assets
 cp src/assets/*.jpg site-2026/assets/
 cp public/favicon.svg site-2026/
 python3 -m http.server 8080 --directory site-2026
-\`\`\`
+```
 
 Open http://localhost:8080
 
