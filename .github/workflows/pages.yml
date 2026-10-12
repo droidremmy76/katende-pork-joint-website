@@ -1,15 +1,12 @@
-name: Deploy Katende website to GitHub Pages
-
+name: Deploy Katende 2026 · ChatGPT-built website
 on:
   push:
     branches: [main]
     paths:
-      - '.github/workflows/pages.yml'
-      - 'src/**'
-      - 'public/**'
-      - 'pages/**'
-      - 'github-pages.package.json'
-      - 'vite.pages.config.ts'
+      - "site-2026/**"
+      - "src/assets/**"
+      - "public/favicon.svg"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -18,35 +15,42 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "katende-pages"
+  group: "katende-site-2026"
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - name: Install lightweight Pages build dependencies
-        run: |
-          cp github-pages.package.json package.json
-          rm -f package-lock.json
-          npm install --no-audit --no-fund
-      - name: Build exact restaurant UI for GitHub Pages
-        run: |
-          npm run build:pages
-          touch dist-pages/.nojekyll
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist-pages
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
     steps:
-      - id: deployment
+      - name: Checkout independent ChatGPT-built website
+        uses: actions/checkout@v4
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Assemble static site with original illustration assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist-pages/assets
+          cp site-2026/index.html dist-pages/index.html
+          cp site-2026/styles.css dist-pages/styles.css
+          cp site-2026/app.js dist-pages/app.js
+          cp src/assets/grill-hero.jpg dist-pages/assets/grill-hero.jpg
+          cp src/assets/pork-detail.jpg dist-pages/assets/pork-detail.jpg
+          cp src/assets/sides.jpg dist-pages/assets/sides.jpg
+          cp src/assets/table-mood.jpg dist-pages/assets/table-mood.jpg
+          cp public/favicon.svg dist-pages/favicon.svg
+          touch dist-pages/.nojekyll
+          test -s dist-pages/index.html
+          test -s dist-pages/styles.css
+          test -s dist-pages/app.js
+          test -s dist-pages/assets/grill-hero.jpg
+      - name: Upload static website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-pages
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
