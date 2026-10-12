@@ -1,34 +1,29 @@
-# Katende Pork Joint Makindye — Website Concept
+# Welcome to your Lovable project
 
-An independent 2026 concept for Katende Pork Joint Makindye by **Habbib Digital Studio**.
+This project was built with [Lovable](https://lovable.dev).
 
-## See the website
+## Build with Lovable
 
-**[Open the interactive design preview](https://id-preview--c03f1f16-5d64-426c-af9b-eff1dde56087.lovable.app)**
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
 
-**[Open the editable Lovable project](https://lovable.dev/projects/c03f1f16-5d64-426c-af9b-eff1dde56087)**
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
 
-## About the code
+## Development
 
-Responsive React + TypeScript and Tailwind CSS site using TanStack Start. Includes cinematic homepage, mobile menu, example menu-category filters, photograph lightbox, scroll animations, WhatsApp contact, click-to-call and Maps directions.
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-This repository contains the application source. The original AI-generated hero/gallery images remain in the design preview and editable Lovable project. For ease of sharing this source export uses public *illustrative* demonstration photo URLs in `src/components/katende/content.ts`. Restore the approved image assets before client launch. See the preview for the final photo direction.
-
-## Run locally
-
-```bash
-npm install
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
 npm run dev
 ```
 
-Production build: `npm run build`. This app uses the Lovable TanStack Start Vite configuration.
+## Built with
 
-## Client review notes
-
-This is an **independent concept demo, not an official restaurant site**. All photographs and example menu concepts are illustrative. Menu prices, hours, delivery, table booking, official branding and full venue photography require verification before publication.
-
-Verified contact used: **+256 754 854668**; **Makindye, Kampala**.
-
----
-
-Concept & development: **Habbib Digital Studio**.
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS

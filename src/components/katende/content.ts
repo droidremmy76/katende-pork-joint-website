@@ -1,8 +1,7 @@
-// Demonstration photography; the original generated images are retained in the Lovable editor.
-const hero="https://images.unsplash.com/photo-1753538430375-029511de8f7b?auto=format&fit=crop&w=1800&q=85";
-const pork="https://images.unsplash.com/photo-1767974968707-db3d448d4ef3?auto=format&fit=crop&w=1200&q=85";
-const sides="https://images.unsplash.com/photo-1777502286499-d91d3339be30?auto=format&fit=crop&w=1200&q=85";
-const mood="https://images.unsplash.com/photo-1767973475472-9ed12d01a5fd?auto=format&fit=crop&w=1200&q=85";
+import hero from '@/assets/grill-hero.jpg'
+import pork from '@/assets/pork-detail.jpg'
+import sides from '@/assets/sides.jpg'
+import mood from '@/assets/table-mood.jpg'
 
 export const photos = { hero, pork, sides, mood }
 export const mapsUrl = 'https://www.google.com/maps/search/?api=1&query=Katende%20Pork%20Joint%20Makindye%20Kampala'
