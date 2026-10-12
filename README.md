@@ -1,29 +1,48 @@
-# Welcome to your Lovable project
+# Katende Pork Joint — 2026 Editorial Website Concept
 
-This project was built with [Lovable](https://lovable.dev).
+**Live independent site:** https://droidremmy76.github.io/katende-pork-joint-website/
 
-## Build with Lovable
+This responsive, single-page website was **written directly in ChatGPT**, hand-coded with semantic HTML, custom CSS, and dependency-free JavaScript. It deploys via GitHub Actions to GitHub Pages. No Lovable runtime, no website-builder dependency, no React build required.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Structure
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- \`site-2026/index.html\` — original editorial HTML5 website, SEO and accessibility metadata.
+- \`site-2026/styles.css\` — bespoke responsive art direction, mobile composition and transitions.
+- \`site-2026/app.js\` — mobile navigation, gallery, accessible tab selection, hover interactions, motion/reveal controls.
+- \`src/assets/*.jpg\` — illustrative concept food photographs, retained as source assets.
+- \`public/favicon.svg\` — simple concept favicon.
+- \`.github/workflows/pages.yml\` — copies this static site and its assets to GitHub Pages.
 
-## Development
+## Design references (inspiration, not copied templates)
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+- [Dribbble](https://dribbble.com/) — premium editorial restaurant composition, typography and photo art direction.
+- [Awwwards](https://www.awwwards.com/) — immersive storytelling and hospitality creative direction.
+- [MotionSites](https://motionsites.ai/) — intentional motion compositions and hero treatments.
+- [21st.dev](https://21st.dev/) — animated text, accessible interaction patterns and components.
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+## Preview locally
 
-## Built with
+Serve \`site-2026/\` from a local static server **with the four assets copied** into \`site-2026/assets/\`. Example, from the repository root:
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+\`\`\`bash
+mkdir -p site-2026/assets
+cp src/assets/*.jpg site-2026/assets/
+cp public/favicon.svg site-2026/
+python3 -m http.server 8080 --directory site-2026
+\`\`\`
+
+Open http://localhost:8080
+
+Do not commit the temporary asset copies; GitHub Pages assembles them automatically.
+
+## Restaurant details & launch notes
+
+- Katende Pork Joint Makindye, Kampala, Uganda.
+- Business contact: +256 754 854668.
+- Maps link points to Google Maps search for the restaurant name.
+- Menu sections are **examples**, not the real restaurant's price list.
+- All current food images are **illustrative concepts**, not verified photos of Katende's actual premises or products.
+- Opening hours, delivery, reservations and actual prices require owner verification before official launch.
+- This is an **independent demonstration concept**, not an official company website.
+
+Website concept and development: **Habbib Digital Studio**.
